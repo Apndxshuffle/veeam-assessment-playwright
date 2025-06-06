@@ -36,7 +36,6 @@ make test-in-docker   # Run tests inside container
 make test-in-colima   # Run tests inside container using colima - checking if colima is started, if not then starting
 ```
 
-> Port `9323` is exposed for Playwright UI or debugging.
 
 ## 🔐 Environment Variables
 
