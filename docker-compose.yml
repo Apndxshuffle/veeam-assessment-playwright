@@ -1,0 +1,16 @@
+services:
+  playwright:
+    build: .
+    container_name: playwright-e2e
+    environment:
+      - CI=true
+      - USER_NAME=${USER_NAME}
+      - USER_PASSWORD=${USER_PASSWORD}
+      - USER_EMAIL=${USER_EMAIL}
+    volumes:
+      - ./:/app:cached
+      - /app/node_modules
+    ports:
+      - "9323:9323"
+    shm_size: '2gb'
+    command: yarn e2e
